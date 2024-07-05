@@ -17,6 +17,10 @@ app.use(cors());
 app.use(bodyParser.json());
 
 //rutas
+app.get('/', (req,res)=>{
+  res.send('Conectado correctamente')
+});
+
 app.get('/productos', async (req,res)=>{
     const conexion = await db.getConnection();
     
