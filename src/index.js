@@ -7,7 +7,7 @@ const sql = require('./consultas');
 
 //configuracion inicial
 const app = express();
-app.set('port',4000);
+app.set('port', process.env.PORT || 4000);
 app.listen(app.get('port'));
 console.log('Activado');
 
