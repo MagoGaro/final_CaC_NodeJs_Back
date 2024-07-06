@@ -13,7 +13,7 @@ console.log('Activado');
 
 //middleware
 app.use(morgan('dev'));
-app.use(cors());
+//app.use(cors());
 app.use(bodyParser.json());
 
 //rutas
