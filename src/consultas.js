@@ -24,11 +24,17 @@ WHERE id = ${id} ;
 const deleteProducto = (id)=> `DELETE FROM productos WHERE id = ${id} ;
 `;
 
+const getListar_l = ()=> `SELECT *
+FROM log_producto;
+`;
+
+
 
 module.exports = {
     getListar_p,
     getListar_c,
     postProducto,
     putProducto,
-    deleteProducto
+    deleteProducto,
+    getListar_l
 }
