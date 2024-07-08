@@ -73,3 +73,11 @@ app.get('/categorias', async (req,res)=>{
     //console.log(result)
     res.json(result)
 });
+
+app.get('/log', async (req,res)=>{
+  const conexion = await db.getConnection();
+  
+  const result = await conexion.query(sql.getListar_l())
+  //console.log(result)
+  res.json(result)
+});
